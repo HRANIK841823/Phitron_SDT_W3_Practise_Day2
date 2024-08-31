@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+   <h3>This is About Page</h3>
+   <div class="cards">
+      {% for i in meals %}
+      <div class="card" style="width: 20rem;">
+         <img src="{{i.strMealThumb}}" class="card-img-top" alt="{{i.strMeal}}">
+         <div class="card-body">
+           <h5 class="card-title">{{i.strMeal}}</h5>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nam dolore mollitia nobis, tenetur enim voluptas quod quis id minima ipsa libero cumque ipsam! Ad impedit unde deserunt sunt sapiente?</p>
+         </div>
+       </div>
+     {% endfor %}
+  </div>
+{% endblock%}

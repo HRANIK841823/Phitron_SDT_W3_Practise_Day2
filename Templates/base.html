@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Day 2 Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            row-gap: 20px;
+            margin-top: 20px;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    {% block  content %}
+   <h3>This is Home page</h3>
+   {% endblock%}
+    
+   <div class="cards">
+    {% for i in meal %}
+    <div class="card" style="width: 20rem;">
+       <img src="{{i.strMealThumb}}" class="card-img-top" alt="{{i.strMeal}}">
+       <div class="card-body">
+         <h5 class="card-title">{{i.strMeal}}</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nam dolore mollitia nobis, tenetur enim voluptas quod quis id minima ipsa libero cumque ipsam! Ad impedit unde deserunt sunt sapiente?</p>
+       </div>
+     </div>
+   {% endfor %}
+</div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
